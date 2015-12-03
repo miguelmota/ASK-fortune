@@ -1,0 +1,15 @@
+{
+  "name": "ask-fortune",
+  "version": "0.0.1",
+  "description": "Fortunes",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Miguel Mota <hello@miguelmota.com> (http://www.miguelmota.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "concat-stream": "^1.5.1",
+    "lodash": "^3.10.1"
+  }
+}

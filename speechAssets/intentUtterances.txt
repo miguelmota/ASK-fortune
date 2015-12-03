@@ -1,0 +1,44 @@
+HelpIntent help
+HelpIntent help me
+HelpIntent what can I ask you
+HelpIntent get help
+HelpIntent to help
+HelpIntent to help me
+HelpIntent what commands can I ask
+HelpIntent what commands can I say
+HelpIntent what can I do
+HelpIntent what can I use this for
+HelpIntent what questions can I ask
+HelpIntent what can you do
+HelpIntent what do you do
+HelpIntent how do I use you
+HelpIntent how can I use you
+HelpIntent what can you tell me
+
+ReadFortuneIntent fortune
+ReadFortuneIntent read
+ReadFortuneIntent read fortune
+ReadFortuneIntent tell me
+ReadFortuneIntent tell me fortune
+ReadFortuneIntent quote
+ReadFortuneIntent inspire
+ReadFortuneIntent inspire me
+ReadFortuneIntent ready
+ReadFortuneIntent im ready
+
+RepeatFortuneIntent repeat
+RepeatFortuneIntent can you repeat
+RepeatFortuneIntent repeat that
+RepeatFortuneIntent please repeat
+RepeatFortuneIntent please can you repeat
+RepeatFortuneIntent what
+RepeatFortuneIntent what was that
+RepeatFortuneIntent say again
+
+QuitIntent quit
+QuitIntent exit
+QuitIntent im done
+QuitIntent no more
+QuitIntent stop
+QuitIntent turn off
+QuitIntent abort
