@@ -1,9 +1,11 @@
-const fs = require('fs');
-const _ = require('lodash');
-const concatStream = require('concat-stream');
+'use strict';
 
-const App = {
-  filesPath: `${__dirname}/fortunes`,
+var fs = require('fs');
+var _ = require('lodash');
+var concatStream = require('concat-stream');
+
+var App = {
+  filesPath: __dirname + '/fortunes',
 
   statuses: {
     ready: 1,
@@ -56,18 +58,20 @@ const App = {
       return false;
     }
 
-    const fileStreams = [];
+    var fileStreams = [];
 
     files.forEach(function(file, i) {
-      const filePath = `${this.filesPath}/${file}`;
+      var filePath = this.filesPath + '/' + file;
 
       fs.stat(filePath, function(error, stats) {
+        var fileNameRegex = /^[\w-_]+$/gi;
+
         if (error) {
           console.trace(error);
           return false;
         }
 
-        if (stats.isFile() && /^[\w-_]+$/gi.test(file)) {
+        if (stats.isFile() && fileNameRegex.test(file)) {
           fileStreams.push(fs.createReadStream(filePath));
         }
         if (i === _.size(files) - 1) {
@@ -86,12 +90,12 @@ const App = {
   },
 
   gotFileData: function(buffer) {
-    const body = buffer.toString();
-    const separator = /^[^%][^\r\n]+/gim;
-    const matches = body.match(separator);
+    var body = buffer.toString();
+    var separator = /^[^%][^\r\n]+/gim;
+    var matches = body.match(separator);
 
     if (matches) {
-      const filtered = matches.filter(function(string) {
+      var filtered = matches.filter(function(string) {
         return _.size(string) > 0;
       }).map(function(string) {
         return string.trim();
@@ -116,17 +120,17 @@ const App = {
   }
 };
 
-const Store = {
-  storeFile: `${__dirname}/cache/fortunes.json`,
+var Store = {
+  storeFile: __dirname + '/cache/fortunes.json',
   cache: [],
   used: [],
 
   load: function(callback) {
-    const store = fs.createReadStream(this.storeFile);
+    var store = fs.createReadStream(this.storeFile);
     store.on('error', function() {
     })
     store.pipe(concatStream(function(buffer) {
-      const body = buffer.toString();
+      var body = buffer.toString();
 
       try {
         this.cache = JSON.parse(body);
@@ -140,14 +144,14 @@ const Store = {
 
   write: function(data) {
     this.cache = data;
-    const store = fs.createWriteStream(this.storeFile);
-    store.write(`${JSON.stringify(data)}`);
+    var store = fs.createWriteStream(this.storeFile);
+    store.write(JSON.stringify(data));
     store.end();
   },
 
   read: function(index) {
     if (!_.isNumber(index)) {
-      index = _.random(0, _.size(this.cache));
+      index = _.random(0, _.size(this.cache)-1);
       this.used.push(index);
     }
 

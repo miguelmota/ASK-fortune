@@ -1,7 +1,6 @@
 'use strict';
 
-const _ = require('lodash');
-const fortuneApp = require('./app');
+var fortuneApp = require('./app');
 
 module.exports = {
   ReadFortuneIntent: function (intent, session, response) {
@@ -9,14 +8,20 @@ module.exports = {
   },
 
   RepeatFortuneIntent: function (intent, session, response) {
-    response.ask(fortuneApp.getLastFortune());
+    var message = fortuneApp.getLastFortune();
+
+    if (message) {
+      response.ask(message);
+    } else {
+      response.ask('I don\'t remember the last fortune.');
+    }
   },
 
   HelpIntent: function (intent, session, response) {
     response.tell('Ask me for a fortune.');
   },
 
-  QuitIntent: function () {
+  QuitIntent: function (intent, session, response) {
     response.tell('Ok');
   }
 };

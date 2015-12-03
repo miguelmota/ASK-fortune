@@ -29,6 +29,8 @@ ReadFortuneIntent im ready
 RepeatFortuneIntent repeat
 RepeatFortuneIntent can you repeat
 RepeatFortuneIntent repeat that
+RepeatFortuneIntent repeat last
+RepeatFortuneIntent repeat last fortune
 RepeatFortuneIntent please repeat
 RepeatFortuneIntent please can you repeat
 RepeatFortuneIntent what
