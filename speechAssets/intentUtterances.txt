@@ -38,6 +38,8 @@ ReadFortuneIntent ready
 ReadFortuneIntent im ready
 ReadFortuneIntent another one
 ReadFortuneIntent tell me more
+ReadFortuneIntent tell me another
+ReadFortuneIntent tell me another one
 ReadFortuneIntent continue
 ReadFortuneIntent keep it going
 ReadFortuneIntent keep it coming
