@@ -1,7 +1,7 @@
 {
   "name": "ask-fortune",
   "version": "0.0.1",
-  "description": "Fortunes",
+  "description": "Read a random, hopefully interesting, adage.",
   "main": "index.js",
   "scripts": {
     "test": "npm test"

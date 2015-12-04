@@ -15,6 +15,11 @@ HelpIntent how do I use you
 HelpIntent how can I use you
 HelpIntent what can you tell me
 
+KeepAliveIntent keep alive
+KeepAliveIntent keep alive session
+KeepAliveIntent long term
+KeepAliveIntent long term session
+
 ReadFortuneIntent fortune
 ReadFortuneIntent read
 ReadFortuneIntent read fortune
@@ -25,6 +30,7 @@ ReadFortuneIntent inspire
 ReadFortuneIntent inspire me
 ReadFortuneIntent ready
 ReadFortuneIntent im ready
+ReadFortuneIntent another one
 
 RepeatFortuneIntent repeat
 RepeatFortuneIntent can you repeat

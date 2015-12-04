@@ -5,6 +5,10 @@
       "slots": []
     },
     {
+      "intent": "KeepAliveIntent",
+      "slots": []
+    },
+    {
       "intent": "ReadFortuneIntent",
       "slots": []
     },

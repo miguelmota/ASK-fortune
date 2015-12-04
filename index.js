@@ -1,8 +1,8 @@
 'use strict';
 
 var AlexaSkill = require('./libs/AlexaSkill');
-var intentHandlers = require('./intents');
-var fortuneApp = require('./app');
+var intentHandlers = require('./libs/intents');
+var fortuneApp = require('./libs/app');
 
 fortuneApp.init();
 
@@ -30,11 +30,8 @@ App.prototype.eventHandlers.onSessionStarted = function (sessionStartedRequest, 
 App.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
   console.log('App onLaunch requestId: ' + launchRequest.requestId + ', sessionId: ' + session.sessionId);
 
-  fortuneApp.ready(function(app) {
-    var speechOutput = app.getFortune();
-    response.ask(speechOutput);
-  });
-
+  var speechOutput = fortuneApp.getFortune();
+  response.ask(speechOutput);
 };
 
 App.prototype.eventHandlers.onSessionEnded = function (sessionEndedRequest, session) {
