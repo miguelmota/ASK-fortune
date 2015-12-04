@@ -19,6 +19,10 @@ KeepAliveIntent keep alive
 KeepAliveIntent keep alive session
 KeepAliveIntent long term
 KeepAliveIntent long term session
+KeepAliveIntent remain open
+KeepAliveIntent stay open
+KeepAliveIntent dont close
+KeepAliveIntent do not close
 
 ReadFortuneIntent fortune
 ReadFortuneIntent read
@@ -31,10 +35,16 @@ ReadFortuneIntent inspire me
 ReadFortuneIntent ready
 ReadFortuneIntent im ready
 ReadFortuneIntent another one
+ReadFortuneIntent tell me more
+ReadFortuneIntent continue
+ReadFortuneIntent keep it going
+ReadFortuneIntent keep it coming
 
 RepeatFortuneIntent repeat
+RepeatFortuneIntent repeat it
 RepeatFortuneIntent can you repeat
 RepeatFortuneIntent repeat that
+RepeatFortuneIntent repeat that one
 RepeatFortuneIntent repeat last
 RepeatFortuneIntent repeat last fortune
 RepeatFortuneIntent please repeat

@@ -9,7 +9,7 @@ module.exports = {
 
   KeepAliveIntent: function (intent, session, response) {
     session.attributes.keepAlive = true;
-    response.tell('Ok.');
+    response.ask('Ok.');
   },
 
   ReadFortuneIntent: function (intent, session, response) {
@@ -20,7 +20,7 @@ module.exports = {
 
   RepeatFortuneIntent: function (intent, session, response) {
     var tell = session.attributes.keepAlive ? 'ask' : 'tell';
-    var message = fortuneApp.getLastFortune();
+    var message = fortuneApp.getLastReadFortune();
 
     if (message) {
       response[tell](message);

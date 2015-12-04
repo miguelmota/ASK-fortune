@@ -4,12 +4,6 @@ var _ = require('lodash');
 var store = require('./store');
 
 var App = {
-  init: function() {
-    this.status = this.statuses.loading;
-
-    this.handleReady();
-  },
-
   handleError: function(error) {
     this.onErrorCallbacks.forEach(function(callback) {
       callback(error);
