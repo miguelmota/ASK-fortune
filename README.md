@@ -1,5 +1,7 @@
 # Alexa Skills Kit Fortune App
 
+<img src="./designAssets/icon108x108.png" width="100">
+
 > Read a random, hopefully interesting, adage.
 
 Copycat of unix [`fortune`](https://en.wikipedia.org/wiki/Fortune_(Unix)) command for the Amazon Echo.
