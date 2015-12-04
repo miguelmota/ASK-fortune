@@ -27,8 +27,10 @@ KeepAliveIntent do not close
 ReadFortuneIntent fortune
 ReadFortuneIntent read
 ReadFortuneIntent read fortune
+ReadFortuneIntent read a fortune
 ReadFortuneIntent tell me
 ReadFortuneIntent tell me fortune
+ReadFortuneIntent tell me a fortune
 ReadFortuneIntent quote
 ReadFortuneIntent inspire
 ReadFortuneIntent inspire me
