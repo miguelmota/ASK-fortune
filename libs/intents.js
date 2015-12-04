@@ -4,7 +4,7 @@ var fortuneApp = require('./app');
 
 module.exports = {
   HelpIntent: function (intent, session, response) {
-    response.tell('Ask me for a fortune.');
+    response.ask('Ask me for a fortune.');
   },
 
   KeepAliveIntent: function (intent, session, response) {

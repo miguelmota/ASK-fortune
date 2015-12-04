@@ -29,20 +29,21 @@ ReadFortuneIntent read
 ReadFortuneIntent read fortune
 ReadFortuneIntent read a fortune
 ReadFortuneIntent tell me
+ReadFortuneIntent tell it
 ReadFortuneIntent tell me fortune
 ReadFortuneIntent tell me a fortune
+ReadFortuneIntent tell me more
+ReadFortuneIntent tell me another
+ReadFortuneIntent tell me another one
 ReadFortuneIntent quote
 ReadFortuneIntent inspire
 ReadFortuneIntent inspire me
 ReadFortuneIntent ready
 ReadFortuneIntent im ready
 ReadFortuneIntent another one
-ReadFortuneIntent tell me more
-ReadFortuneIntent tell me another
-ReadFortuneIntent tell me another one
 ReadFortuneIntent continue
 ReadFortuneIntent keep it going
-ReadFortuneIntent keep it coming
+ReadFortuneIntent speak
 
 RepeatFortuneIntent repeat
 RepeatFortuneIntent repeat it

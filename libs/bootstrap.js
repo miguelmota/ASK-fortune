@@ -6,7 +6,7 @@ var _ = require('lodash');
 var concatStream = require('concat-stream');
 
 var bootstrap = {
-  filesPath: path.resolve(__dirname + '/../fortunes'),
+  filesPath: path.resolve(__dirname + '/../data/fortunes'),
 
   init: function() {
     fs.readdir(this.filesPath, this.gotFiles.bind(this));
@@ -51,8 +51,8 @@ var bootstrap = {
 
   gotFileData: function(buffer) {
     var body = buffer.toString();
-    var separator = /^[^%][^\r\n]+/gim;
-    var matches = body.match(separator);
+    var separator = /[\r\n]%[\r\n]/i
+    var matches = body.split(separator);
 
     if (matches) {
       var filtered = matches.filter(function(string) {
@@ -72,7 +72,7 @@ var bootstrap = {
 
   write: function(data) {
     var store = fs.createWriteStream(this.storeFile);
-    store.write(JSON.stringify(data));
+    store.write(JSON.stringify(data, null, 2));
     store.end();
     console.log('File written');
   }
