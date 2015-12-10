@@ -1,7 +1,11 @@
 {
   "intents": [
     {
-      "intent": "HelpIntent",
+      "intent": "AMAZON.HelpIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.StopIntent",
       "slots": []
     },
     {
@@ -14,10 +18,6 @@
     },
     {
       "intent": "RepeatFortuneIntent",
-      "slots": []
-    },
-    {
-      "intent": "QuitIntent",
       "slots": []
     }
   ]

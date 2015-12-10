@@ -6,7 +6,7 @@ var _ = require('lodash');
 var concatStream = require('concat-stream');
 
 var bootstrap = {
-  filesPath: path.resolve(__dirname + '/../data/fortunes'),
+  filesPath: path.resolve(__dirname + '/fortunes'),
 
   init: function() {
     fs.readdir(this.filesPath, this.gotFiles.bind(this));
@@ -68,7 +68,7 @@ var bootstrap = {
     }
   },
 
-  storeFile: path.resolve(__dirname + '/../data/fortunes.json'),
+  storeFile: path.resolve(__dirname + '/fortunes.data.json'),
 
   write: function(data) {
     var store = fs.createWriteStream(this.storeFile);

@@ -1,19 +1,25 @@
-HelpIntent help
-HelpIntent help me
-HelpIntent what can I ask you
-HelpIntent get help
-HelpIntent to help
-HelpIntent to help me
-HelpIntent what commands can I ask
-HelpIntent what commands can I say
-HelpIntent what can I do
-HelpIntent what can I use this for
-HelpIntent what questions can I ask
-HelpIntent what can you do
-HelpIntent what do you do
-HelpIntent how do I use you
-HelpIntent how can I use you
-HelpIntent what can you tell me
+AMAZON.HelpIntent help
+AMAZON.HelpIntent help me
+AMAZON.HelpIntent what can I ask you
+AMAZON.HelpIntent get help
+AMAZON.HelpIntent what commands can I ask
+AMAZON.HelpIntent what commands can I say
+AMAZON.HelpIntent what can I do
+AMAZON.HelpIntent what can I use this for
+AMAZON.HelpIntent what questions can I ask
+AMAZON.HelpIntent what can you do
+AMAZON.HelpIntent what do you do
+AMAZON.HelpIntent how do I use you
+AMAZON.HelpIntent how can I use you
+AMAZON.HelpIntent what can you tell me
+
+AMAZON.StopIntent quit
+AMAZON.StopIntent exit
+AMAZON.StopIntent I'm done
+AMAZON.StopIntent no more
+AMAZON.StopIntent stop
+AMAZON.StopIntent turn off
+AMAZON.StopIntent abort
 
 KeepAliveIntent keep alive
 KeepAliveIntent keep alive session
@@ -25,9 +31,12 @@ KeepAliveIntent dont close
 KeepAliveIntent do not close
 
 ReadFortuneIntent fortune
+ReadFortuneIntent fortune cookie
 ReadFortuneIntent read
 ReadFortuneIntent read fortune
 ReadFortuneIntent read a fortune
+ReadFortuneIntent get fortune
+ReadFortuneIntent get me fortune
 ReadFortuneIntent tell me
 ReadFortuneIntent tell it
 ReadFortuneIntent tell me fortune
@@ -36,10 +45,17 @@ ReadFortuneIntent tell me more
 ReadFortuneIntent tell me another
 ReadFortuneIntent tell me another one
 ReadFortuneIntent quote
+ReadFortuneIntent quotes
+ReadFortuneIntent inspiration
 ReadFortuneIntent inspire
 ReadFortuneIntent inspire me
+ReadFortuneIntent motivation
+ReadFortuneIntent motivate
+ReadFortuneIntent motivate me
+ReadFortuneIntent uplifting
+ReadFortuneIntent lifting
 ReadFortuneIntent ready
-ReadFortuneIntent im ready
+ReadFortuneIntent I'm ready
 ReadFortuneIntent another one
 ReadFortuneIntent continue
 ReadFortuneIntent keep it going
@@ -57,11 +73,3 @@ RepeatFortuneIntent please can you repeat
 RepeatFortuneIntent what
 RepeatFortuneIntent what was that
 RepeatFortuneIntent say again
-
-QuitIntent quit
-QuitIntent exit
-QuitIntent im done
-QuitIntent no more
-QuitIntent stop
-QuitIntent turn off
-QuitIntent abort
