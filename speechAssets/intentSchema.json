@@ -5,11 +5,19 @@
       "slots": []
     },
     {
+      "intent": "AMAZON.CancelIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.NoIntent",
+      "slots": []
+    },
+    {
       "intent": "AMAZON.StopIntent",
       "slots": []
     },
     {
-      "intent": "KeepAliveIntent",
+      "intent": "AMAZON.YesIntent",
       "slots": []
     },
     {

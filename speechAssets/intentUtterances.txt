@@ -13,6 +13,13 @@ AMAZON.HelpIntent how do I use you
 AMAZON.HelpIntent how can I use you
 AMAZON.HelpIntent what can you tell me
 
+AMAZON.CancelIntent cancel
+
+AMAZON.NoIntent no
+AMAZON.NoIntent no thanks
+AMAZON.NoIntent no please
+AMAZON.NoIntent negative
+
 AMAZON.StopIntent quit
 AMAZON.StopIntent exit
 AMAZON.StopIntent I'm done
@@ -21,14 +28,15 @@ AMAZON.StopIntent stop
 AMAZON.StopIntent turn off
 AMAZON.StopIntent abort
 
-KeepAliveIntent keep alive
-KeepAliveIntent keep alive session
-KeepAliveIntent long term
-KeepAliveIntent long term session
-KeepAliveIntent remain open
-KeepAliveIntent stay open
-KeepAliveIntent dont close
-KeepAliveIntent do not close
+AMAZON.YesIntent yes
+AMAZON.YesIntent yes please
+AMAZON.YesIntent please
+AMAZON.YesIntent absolutely
+AMAZON.YesIntent sure
+AMAZON.YesIntent ok
+AMAZON.YesIntent affirmative
+AMAZON.YesIntent positive
+AMAZON.YesIntent continue
 
 ReadFortuneIntent fortune
 ReadFortuneIntent fortune cookie

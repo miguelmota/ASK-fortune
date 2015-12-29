@@ -1,36 +1,54 @@
 'use strict';
 
 var fortuneApp = require('./app');
+var text = require('./text');
 
 module.exports = {
-  'AMAZON.HelpIntent': function (intent, session, response) {
-    response.ask('You can ask me for a fortune, by saying things like, "Alexa, open Fortune", and I will read you a read a random, hopefully interesting, adage.');
-  },
+  'AMAZON.HelpIntent': HelpIntent,
 
-  'AMAZON.StopIntent': function (intent, session, response) {
-    session.attributes.keepAlive = false;
-    response.tell('Goodbye.');
-  },
+  'AMAZON.CancelIntent': CancelIntent,
 
-  KeepAliveIntent: function (intent, session, response) {
-    session.attributes.keepAlive = true;
-    response.ask('Ok, just ask me for a fortune when you\'re ready.');
-  },
+  'AMAZON.NoIntent': NoIntent,
 
-  ReadFortuneIntent: function (intent, session, response) {
-    var tell = session.attributes.keepAlive ? 'ask' : 'tell';
+  'AMAZON.StopIntent': StopIntent,
 
-    response[tell](fortuneApp.getFortune());
-  },
+  'AMAZON.YesIntent': YesIntent,
 
-  RepeatFortuneIntent: function (intent, session, response) {
-    var tell = session.attributes.keepAlive ? 'ask' : 'tell';
-    var message = fortuneApp.getLastReadFortune();
+  ReadFortuneIntent: ReadFortuneIntent,
 
-    if (message) {
-      response[tell](message);
-    } else {
-      response[tell]('Sorry, I don\'t remember the last fortune.');
-    }
-  }
+  RepeatFortuneIntent: RepeatFortuneIntent
 };
+
+function CancelIntent(intent, session, response) {
+  NoIntent(intent, session, response);
+}
+
+function HelpIntent(intent, session, response) {
+    response.ask(text.help);
+  }
+
+function NoIntent(intent, session, response) {
+  response.tell(text.exit);
+}
+
+function StopIntent(intent, session, response) {
+  response.tell(text.exit);
+}
+
+function YesIntent(intent, session, response) {
+  ReadFortuneIntent(intent, session, response);
+}
+
+function ReadFortuneIntent(intent, session, response) {
+  response.ask(text.fortuneIs + ', ' + fortuneApp.getFortune() + '. ' + text.askForAnotherFortune);
+}
+
+function RepeatFortuneIntent(intent, session, response) {
+  var message = fortuneApp.getLastReadFortune();
+
+  if (message) {
+    response.ask(text.fortuneWas + ', ' + message + '. ' + text.askForAnotherFortune);
+  } else {
+    response.ask(text.dontRememberLast + ' ' + text.askForAnotherFortune);
+  }
+}

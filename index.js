@@ -28,8 +28,7 @@ App.prototype.eventHandlers.onSessionStarted = function (sessionStartedRequest, 
 App.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
   console.log('App onLaunch requestId: ' + launchRequest.requestId + ', sessionId: ' + session.sessionId);
 
-  var speechOutput = fortuneApp.getFortune();
-  response.tell(speechOutput);
+  intentHandlers.ReadFortuneIntent(launchRequest, session, response);
 };
 
 App.prototype.eventHandlers.onSessionEnded = function (sessionEndedRequest, session) {
